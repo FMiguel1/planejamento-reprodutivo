@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Planejamento Reprodutivo</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
-      min-height: 100vh;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
       background: #fffdfd;
-      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-family: "Montserrat", Arial, sans-serif;
       color: #35105F;
       overflow-x: hidden;
     }
@@ -26,17 +34,18 @@
     .page {
       position: relative;
       min-height: 100vh;
-      padding: 70px 24px 50px;
+      padding: 64px 24px 48px;
       overflow: hidden;
     }
 
-    /* Formas orgânicas discretas da identidade visual */
+    /* FORMAS ORGÂNICAS */
+
     .shape {
       position: absolute;
       border-radius: 50%;
       background: #F5E7FA;
-      z-index: 0;
       pointer-events: none;
+      z-index: 0;
     }
 
     .shape-1 {
@@ -65,6 +74,8 @@
       opacity: .75;
     }
 
+    /* CONTEÚDO */
+
     main {
       position: relative;
       z-index: 1;
@@ -75,14 +86,14 @@
 
     header {
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(44px, 7vw, 76px);
-      line-height: .9;
-      letter-spacing: -3px;
+      margin: 0 auto;
+      font-size: clamp(48px, 5.5vw, 86px);
+      line-height: .90;
+      letter-spacing: -0.055em;
       font-weight: 900;
       color: #4B087D;
     }
@@ -93,37 +104,41 @@
     }
 
     .subtitle {
-      margin: 22px auto 0;
-      font-size: clamp(16px, 2vw, 20px);
+      margin: 16px auto 0;
+      font-size: clamp(16px, 1.5vw, 20px);
       line-height: 1.4;
+      font-weight: 400;
       color: #35105F;
     }
 
     .accent {
       width: 52px;
       height: 5px;
-      margin: 24px auto 0;
+      margin: 18px auto 0;
       border-radius: 999px;
       background: #F51675;
     }
 
+    /* VÍDEO */
+
     .video-wrapper {
       width: 100%;
       background: #F5E7FA;
-      padding: 9px;
-      border-radius: 24px;
+      padding: 7px;
+      border-radius: 22px;
     }
 
     video {
-      width: 100%;
       display: block;
+      width: 100%;
+      height: auto;
       aspect-ratio: 16 / 9;
       background: #000;
-      border-radius: 17px;
+      border-radius: 16px;
     }
 
     footer {
-      margin-top: 24px;
+      margin-top: 20px;
       text-align: center;
       font-size: 13px;
       line-height: 1.5;
@@ -131,86 +146,100 @@
       opacity: .65;
     }
 
+
+    /* =========================
+       CELULAR
+       ========================= */
+
     @media (max-width: 600px) {
+
       .page {
-        padding: 48px 16px 34px;
+        padding: 52px 16px 36px;
+      }
+
+      main {
+        width: 100%;
+        max-width: 100%;
       }
 
       header {
+        width: 100%;
         margin-bottom: 28px;
       }
 
       h1 {
-        font-size: clamp(39px, 12vw, 58px);
-        letter-spacing: -2px;
+        /*
+          Escala pela largura da tela para as duas palavras
+          permanecerem inteiras.
+        */
+        font-size: 9.6vw;
+        line-height: .92;
+        letter-spacing: -0.055em;
+        white-space: nowrap;
+      }
+
+      h1 span {
+        display: block;
       }
 
       .subtitle {
         max-width: 280px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .accent {
+        width: 44px;
+        height: 4px;
+        margin-top: 18px;
       }
 
       .video-wrapper {
-        padding: 6px;
+        width: 100%;
+        margin-top: 26px;
+        padding: 5px;
         border-radius: 16px;
       }
 
       video {
-        border-radius: 11px;
+        border-radius: 12px;
+      }
+
+      footer {
+        margin-top: 18px;
+        padding: 0 8px;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      /* formas mais discretas no celular */
+
+      .shape-1 {
+        width: 300px;
+        height: 180px;
+        top: -90px;
+        left: -140px;
+      }
+
+      .shape-2 {
+        width: 240px;
+        height: 160px;
+        right: -140px;
+        top: 390px;
+      }
+
+      .shape-3 {
+        width: 230px;
+        height: 140px;
+        left: -130px;
+        bottom: 30px;
       }
     }
- /* Ajustes para celular */
-@media (max-width: 600px) {
 
-  body {
-    padding: 36px 18px;
-    min-height: 100vh;
-  }
-
-  main {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  h1 {
-    font-size: clamp(42px, 12vw, 64px);
-    line-height: 0.9;
-    letter-spacing: -2px;
-    width: 100%;
-    max-width: 100%;
-    overflow-wrap: normal;
-  }
-
-  h1 span {
-    display: block;
-  }
-
-  .intro {
-    font-size: 20px;
-    line-height: 1.35;
-    max-width: 330px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .video {
-    width: 100%;
-    margin-top: 32px;
-  }
-
-  video {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .info {
-    font-size: 15px;
-    line-height: 1.4;
-    margin-top: 24px;
-  }
-} </style>
+  </style>
 </head>
+
 
 <body>
 
@@ -223,9 +252,10 @@
     <main>
 
       <header>
+
         <h1>
           PLANEJAMENTO
-          <span>REPRODUTIVO</span>
+          <span>REPRODUTIVO.</span>
         </h1>
 
         <p class="subtitle">
@@ -233,14 +263,19 @@
         </p>
 
         <div class="accent"></div>
+
       </header>
 
+
       <div class="video-wrapper">
+
         <video controls playsinline preload="metadata">
           <source src="planejamento-reprodutivo.mp4" type="video/mp4">
           Seu navegador não suporta a reprodução deste vídeo.
         </video>
+
       </div>
+
 
       <footer>
         Material educativo sobre planejamento reprodutivo.
@@ -251,4 +286,5 @@
   </div>
 
 </body>
+
 </html>
