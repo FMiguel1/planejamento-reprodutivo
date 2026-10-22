@@ -158,7 +158,58 @@
         border-radius: 11px;
       }
     }
-  </style>
+ /* Ajustes para celular */
+@media (max-width: 600px) {
+
+  body {
+    padding: 36px 18px;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+
+  h1 span {
+    display: block;
+  }
+
+  .intro {
+    font-size: 20px;
+    line-height: 1.35;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video {
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 24px;
+  }
+} </style>
 </head>
 
 <body>
