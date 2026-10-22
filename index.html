@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Planejamento Reprodutivo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #FBE5F1;
+      font-family: Arial, sans-serif;
+      color: #35105F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #F5E7FA;
+      color: #4B087D;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #4B087D;
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 0.95;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: #F51675;
+    }
+
+    .intro {
+      margin: 18px auto 30px;
+      max-width: 650px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .video {
+      background: #4B087D;
+      padding: 8px;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+      background: #000;
+    }
+
+    .info {
+      margin-top: 22px;
+      font-size: 14px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="tag">
+      Informação para escolhas conscientes
+    </div>
+
+    <h1>
+      Planejamento<br>
+      <span>Reprodutivo</span>
+    </h1>
+
+    <p class="intro">
+      Conheça os principais métodos contraceptivos,
+      suas características e informações importantes
+      para uma escolha consciente.
+    </p>
+
+    <div class="video">
+      <video controls playsinline preload="metadata">
+        <source src="planejamento-reprodutivo.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução deste vídeo.
+      </video>
+    </div>
+
+    <p class="info">
+      Material educativo sobre planejamento reprodutivo.
+    </p>
+
+  </main>
+
+</body>
+</html>
