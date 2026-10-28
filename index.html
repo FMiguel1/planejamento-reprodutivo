@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
 
@@ -137,6 +137,8 @@
       border-radius: 16px;
     }
 
+    /* LEGENDA */
+
     footer {
       margin-top: 20px;
       text-align: center;
@@ -144,6 +146,36 @@
       line-height: 1.5;
       color: #35105F;
       opacity: .65;
+    }
+
+    /* CRÉDITOS */
+
+    .creditos {
+      width: 100%;
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      text-align: center;
+      align-items: start;
+    }
+
+    .credito-titulo {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: .055em;
+      color: #4B087D;
+    }
+
+    .credito-nome {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 500;
+      color: #35105F;
     }
 
 
@@ -154,7 +186,7 @@
     @media (max-width: 600px) {
 
       .page {
-        padding: 52px 16px 36px;
+        padding: 52px 16px 42px;
       }
 
       main {
@@ -168,10 +200,6 @@
       }
 
       h1 {
-        /*
-          Escala pela largura da tela para as duas palavras
-          permanecerem inteiras.
-        */
         font-size: 9.6vw;
         line-height: .92;
         letter-spacing: -0.055em;
@@ -213,7 +241,27 @@
         line-height: 1.45;
       }
 
-      /* formas mais discretas no celular */
+      /* CRÉDITOS NO CELULAR */
+
+      .creditos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px 16px;
+        margin-top: 30px;
+        padding: 0 8px;
+      }
+
+      .credito-titulo {
+        margin-bottom: 6px;
+        font-size: 9px;
+        line-height: 1.25;
+      }
+
+      .credito-nome {
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      /* FORMAS MAIS DISCRETAS NO CELULAR */
 
       .shape-1 {
         width: 300px;
@@ -280,6 +328,31 @@
       <footer>
         Material educativo sobre planejamento reprodutivo.
       </footer>
+
+
+      <section class="creditos">
+
+        <div class="credito">
+          <span class="credito-titulo">AUTORA</span>
+          <p class="credito-nome">Marcela P. S. Mello</p>
+        </div>
+
+        <div class="credito">
+          <span class="credito-titulo">ORIENTADORA</span>
+          <p class="credito-nome">Helaine Oliveira</p>
+        </div>
+
+        <div class="credito">
+          <span class="credito-titulo">CO-ORIENTADORA</span>
+          <p class="credito-nome">Vanessa Seabra</p>
+        </div>
+
+        <div class="credito">
+          <span class="credito-titulo">DESIGN E PRODUÇÃO</span>
+          <p class="credito-nome">Filipe Miguel</p>
+        </div>
+
+      </section>
 
     </main>
 
